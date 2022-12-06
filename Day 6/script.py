@@ -7,19 +7,19 @@ def isDiffrent(prev):
 with open('input.txt','r') as file_input:
     line = file_input.readline()
     result=0
-    
+
     #part1
-    # characterCount=4
+    # markerLength=4
 
     #part2
-    characterCount=14
+    markerLength=14
 
     for x in range(0,len(line)):
         prev=[]
-        for y in range(x,min(x+characterCount,len(line))):
+        for y in range(x,min(x+markerLength,len(line))):
             prev.append(line[y])
 
         if isDiffrent(prev):
-            result=x+characterCount
+            result=x+markerLength
             break
     print(f"Result: {result}")
